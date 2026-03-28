@@ -23,14 +23,21 @@ class Produto{
   String categoria;
 
   Produto(this.nome,this.categoria, this.preco);
+
+  void exibirproduto(){
+  print('Produto: $nome' );
+  }
 }
 
-void exibirproduto(){
-  print('Produto: ${this.nome}' );
-}
+
 
 void exemploclass(){
   Produto produto1 = Produto("Xbox", "Tech", 4500);
   produto1.exibirproduto(); 
 }
+
+
+
+
+
 
