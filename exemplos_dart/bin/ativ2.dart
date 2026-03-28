@@ -6,7 +6,7 @@ void main(){
 
 class Livro{
     String? nome;
-    int ano; 
+    int? ano; 
     String? genero;
 
     Livro(this.nome,this.ano,this.genero);
@@ -32,6 +32,7 @@ void adicionarlivro(){
   Livro livro1 = Livro(nomeLivro ,anolivro,generoLivro);
 
   livros.add(livro1);
+  print("Livro Adicionado");
 }
 
 void exibirlivros(){
@@ -47,18 +48,59 @@ void exibirlivros(){
 }
 
 void removerlivro(){
+  if (livros.isEmpty){
+    print("A Lista está vazia");
+    menu();
+  }
   exibirlivros();
   print("Selecione o livro que quer remover: ");
   String? remover = stdin.readLineSync();
-  int indiceremover = int.parse(remover ?? '');
+  int indiceremover = int.parse(remover ?? "");
   if (indiceremover == null || indiceremover > livros.length || indiceremover == ""){
     print("Indice não é válido, digite novamente: ");
-    String? remover = stdin.readLineSync();
-    int indiceremover = int.parse(remover ?? '');
-    livros.remove(indiceremover);
+    removerlivro();
   }
   else {
     livros.removeAt(indiceremover);
+    print("Livro removido!");
+  }
+
+}
+
+void atualizarlivro(){
+  if (livros.isEmpty){
+    print("A Lista está vazia");
+    menu();
+  }
+  exibirlivros();
+  print("Digite o livro que você deseja atualizar");
+  String? atualizar = stdin.readLineSync();
+  int indiceatualizar = int.parse(atualizar ?? "");
+  if (indiceatualizar == "" || indiceatualizar > livros.length){
+      print("Indice não é valido, digite novamente");
+  }
+  else{
+    print("Digite o nome atualizado ou enter para manter: ");
+    String? novonome = stdin.readLineSync();
+    print("Digite o ano atualizado ou enter para manter: ");
+    String? novoano = stdin.readLineSync();
+    int? anonovoint = int.tryParse(novoano ?? "");
+    print("Digite o genero atualizado ou enter para manter: ");
+    String? novogenero = stdin.readLineSync();
+
+    if (novonome != null || novonome == ""){
+      livros[indiceatualizar].nome = novonome;
+    }
+
+     if (anonovoint != null || anonovoint == ""){
+      livros[indiceatualizar].ano = anonovoint;
+    }
+
+     if (novogenero != null || novogenero == ""){
+      livros[indiceatualizar].genero = novogenero; 
+    }
+
+    print("Livro atualizado! ");
   }
 
 }
@@ -79,7 +121,7 @@ void menu(){
     break;
 
     case "3":
-    print("Ainda não temos essa opção... Volte mais tarde");
+    atualizarlivro();
     menu();
     break;
 
