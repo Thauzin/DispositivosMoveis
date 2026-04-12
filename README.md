@@ -2,9 +2,9 @@
 
 ## 📌 Como acessar as atividades? ##
 Para as atividades 1 e 2 acesse: exemplos_dart/bin/[nome da atividade] <br>
-Para rodar as atividades 1 e 2 digite no terminal: dart bin/[nome da atividade].dart <br>
+Para rodar as atividades 1 e 2 digite no terminal: `dart bin/[nome da atividade]` <br>
 Para as atividades 3 e 4 acesse: exemplos_dart/lib/[nome da atividade] <br>
-Para rodar as atividades 3 e 4 digite no terminal: flutter run -t lib/[nome da atividade].dart <br>
+Para rodar as atividades 3 e 4 digite no terminal: `flutter run -t lib/[nome da atividade]` <br>
 Obs: O nome da atividade está identificado na descrição das atividades. 
 
 ## 📝 Atividade 1 
