@@ -88,15 +88,15 @@ void atualizarlivro(){
     print("Digite o genero atualizado ou enter para manter: ");
     String? novogenero = stdin.readLineSync();
 
-    if (novonome != null || novonome == ""){
+    if (novonome != null && novonome.isNotEmpty){
       livros[indiceatualizar].nome = novonome;
     }
 
-     if (anonovoint != null || anonovoint == ""){
+     if (anonovoint != null || anonovoint != ""){
       livros[indiceatualizar].ano = anonovoint;
     }
 
-     if (novogenero != null || novogenero == ""){
+     if (novogenero != null && novogenero.isNotEmpty){
       livros[indiceatualizar].genero = novogenero; 
     }
 
