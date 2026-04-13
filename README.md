@@ -37,4 +37,12 @@ Para lógica da minha calculadora criei 3 métodos: <br>
 **2 - caloperacao:** Esse método registra qual operação matemática o usuário clicou. <br>
 **3 - caltotal:** Esse método é acionado após o usuário clicar no "=", o método calcula os números 1 e 2 digitados pelo usuário e a operação desejada, mostrando o total na tela.  
 
+## 📝 Atividade 3
+O objetivo dessa atividade foi fazer uma lista de tarefas <br>
+Essa atividade foi separada em 4 arquivos, entre eles: <br>
+**Provider (task_provider):** Responsavel pela lógica do projeto, ou seja atributos e metodos da tarefa. <br>
+**Widgets (task_widgets):** Responsavel pelo visual dos icones menores do projeto <br>
+**Screen (task_screen):** Responsavel por juntar o visual e a lógica desse projeto. <br>
+**Main.dart** É esse arquivo que vai chamar todo o programa e esse que você vai rodar para visualizar o projeto.
+
 
